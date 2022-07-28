@@ -41,6 +41,3 @@ elif tipo == 3:
 	print(f"\nCom uma parede de {area:.1f}m² é necessario {qt_galao} galões e {qt_lata} latas, com o preço total de R${preco:.2f}")
 else:
 	print("escolha um tipo")
-
-# 240| 300| 235
-# 800| 1175| 825 
