@@ -4,3 +4,24 @@
 # Triângulo Equilátero: três lados iguais;
 # Triângulo Isósceles: quaisquer dois lados iguais;
 # Triângulo Escaleno: três lados diferentes;
+
+a = int(input("Informe o valor do lado A: "))
+b = int(input("Informe o valor do lado B: "))
+c = int(input("Informe o valor do lado C: "))
+
+somaAB = a + b
+somaAC = a + c
+somaBC = b + c
+
+
+if somaAB >= c and somaAC >= b and somaBC >= a:
+	if a == b and a == c:
+		tipo = "triângulo equilátero"
+	elif b == c or a == b or a == c:
+		tipo = "triângulo Isósceles"
+	else:
+		tipo = "triângulo escaleno"
+else:
+	print("Não é um triângulo")
+
+print(f"\n{tipo.title()}")
