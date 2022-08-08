@@ -20,11 +20,11 @@ else:
 		print(f"\nO delta {delta} é negativo, essa equação não possui raizes reais")
 	elif delta > 0:
 		delta = sqrt(delta)
-		raiz_real1 = (-b + delta) / (2 * a) 
-		raiz_real2 = (-b - delta) / (2 * a)
-		print(f"\nraiz real 1: {raiz_real1}")
-		print(f"raiz real 2: {raiz_real2}")
+		raiz1 = (-b + delta) / (2 * a) 
+		raiz2 = (-b - delta) / (2 * a)
+		print(f"\nraiz 1: {raiz1:.2f}")
+		print(f"raiz 2: {raiz2:.2f}")
 	else:
-		raiz_real = -b / (2 * a) 
-		print(f"\nraiz real: {raiz_real}")
+		raiz = -b / (2 * a) 
+		print(f"\nraiz: {raiz:.2f}")
 	
