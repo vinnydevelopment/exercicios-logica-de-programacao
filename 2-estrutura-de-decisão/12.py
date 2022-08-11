@@ -10,3 +10,34 @@
 #         FGTS (11%)                      : R$  121,00
 #         Total de descontos              : R$  165,00
 #         Salário Liquido                 : R$  935,00
+
+
+#Entrada
+hora = float(input("Informe o valor da sua hora de trabalho: "))
+mes = int(input("Informe quantas horas você trabalha por mês: "))
+#Processamento
+salario_bruto = hora * mes
+
+if salario_bruto <= 900:
+	percentual = 0
+elif salario_bruto <= 1500:
+	percentual = 5
+elif salario_bruto <= 2500:
+	percentual = 10
+else:
+	percentual = 20
+
+IR = (salario_bruto * (percentual / 100))
+INSS = salario_bruto * 0.10
+FGTS = salario_bruto * 0.11
+total_descontos = IR + INSS
+salario_liquido = (salario_bruto - total_descontos)
+#Saída
+print(f"\tSalário Bruto({hora} * {mes}): R${salario_bruto:.2f}")
+print(f"\t(-)IR({percentual}%): R${IR:.2f}")
+print(f"\t(-)INSS(5%): R${INSS:.2f}")
+print(f"\tFGTS(11%): R${FGTS:.2f}")
+print(f"\tTotal de descontos: R${total_descontos:.2f}")
+print(f"\tSalário Líquido: R${salario_liquido:.2f}")
+
+
